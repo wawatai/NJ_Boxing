@@ -1,0 +1,588 @@
+.myPage {
+
+    //中
+    .mainArea {
+        
+        .contentBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .pageTitle {
+                @include bigtitle_Line;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            
+            .overview {
+                width: 90%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $mainColor_4;
+                padding: 50px;
+                
+                table {
+                    width: 100%;
+                    height: auto;
+
+                    tr {
+                        &:last-child {
+                            border-top: 1px solid $mainColor_8;
+
+                            td {
+
+                                &:first-child {
+
+                                    p {
+                                        text-align: right;
+                                    }
+                                }
+
+                                p {
+                                    line-height: 40px;
+                                }
+                            }
+                        }
+                    
+                        td {
+                            width: 15%;
+
+                            &:not(:first-child) {
+                                p {
+                                    text-align: right;
+                                }
+                            }
+
+                            &:first-child {
+                                width: 70%;
+                                p {
+                                    padding: 0 10px;
+                                }
+                            }
+
+                            &:last-child {
+                                
+                                p {
+                                    padding: 0 10px;
+                                }
+                            }
+
+                            p {
+                                color: $mainColor_8;
+                                font-size: 0.9rem;
+                                line-height: 40px;
+                                padding: 0 5px;
+                                @include textHide;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .myRewrad {
+                width: 100%;
+                height: auto;
+                margin-top: 30px;
+                
+                .title {
+                    background: $mainColor_17;
+                    color: $mainColor_15;
+                    padding: 20px 5%;
+                    margin-bottom: 20px;
+                }
+
+                .rewrad_btn {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    button {
+                        flex-shrink: 0;
+                        background: $mainColor_17;
+                        color: $mainColor_8;
+                        border-radius: 20px;
+                        padding: 10px 20px;
+
+                        &:hover,&:active,&.active {
+                            background: $mainColor_6;
+                            color: $mainColor_3;
+                        }
+
+                        &:first-child {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .reward_stauts {
+                    color: $mainColor_3;
+                    font-size: 0.8rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .mobile_content {
+            display: none;
+            width: 100%;
+            height: auto;
+
+            .innerBox {
+                width: 100%;
+                padding: 0 4vw 19vw;
+
+                // 個人頁主頁
+                &.userHome {
+
+                    .topBox {
+                        width: 100%;
+                        height: auto;
+                        border: 1px solid $mainColor_6;
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 4vw;
+
+                        .userBox {
+                            width: 100%;
+                            height: auto;
+                            border-bottom: 1px solid $mainColor_6;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            padding: 1vw 3vw 2vw;
+
+                            &::before {
+                                content: "";
+                                @include arrow_2;
+                                right: 15px;
+                            }
+
+                            .userPic {
+                                width: 15vw;
+                                height: 15vw;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                margin: 1vw 4.5vw 1vw 0;
+                            }
+
+                            p {
+                                color: $mainColor_6;
+                                font-size: 0.95rem;
+                                font-weight: bold;
+
+                                span {
+                                    display: block;
+                                    color: $mainColor_3;
+                                    font-size: 1rem;
+                                    margin-top: 2vw;
+                                }
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
+
+                            li {
+                                width: 25%;
+                                height: auto;
+
+                                &:not(:first-child) {
+
+                                    .userNav_IC {
+                                        margin: 10px auto 15px;
+                                    }
+                                }
+
+                                &.betLimit {
+                            
+                                    .userNav_IC {
+                                        background-position-y: 0%;
+                                        margin-top: 15px;
+                                    }
+                                }
+
+                                &.rule {
+                            
+                                    .userNav_IC {
+                                        background-position-y: 34%;
+                                    }
+                                }
+
+                                &.setting {
+                            
+                                    .userNav_IC {
+                                        background-position-y: 68%;
+                                    }
+                                }
+
+                                &.goWeb {
+                            
+                                    .userNav_IC {
+                                        background-position-y: 100%;
+                                    }
+                                }
+
+                                a {
+                                    width: 100%;
+                                    height: auto;
+
+                                    .userNav_IC {
+                                        width: 10vw;
+                                        height: 10vw;
+                                        margin: auto;
+                                    }
+
+                                    p { 
+                                        color: $mainColor_6;
+                                        font-size: 0.95rem;
+                                        text-align: center;
+                                        margin: 10px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .pageList {
+                        width: 100%;
+                        height: auto;
+                        margin-top: 4vw;
+
+                        li {
+                            width: 100%;
+                            height: auto;
+                            background: $mainColor;
+                            margin-bottom: 2vw;
+
+                            a {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                padding: 0 2vw;
+
+                                &::before {
+                                    content: "";
+                                    @include arrow_1;
+                                    transform: translateY(-50%) rotate(-90deg);
+                                    right: 15px;
+                                }
+
+                                &.qa {
+
+                                    i {
+                                        background-position-y: 0%;
+                                    }
+                                }
+
+                                &.message_center {
+
+                                    i {
+                                        background-position-y: 16%;
+                                    }
+                                }
+
+                                &.cs_service {
+
+                                    i {
+                                        background-position-y: 33%;
+                                    }
+                                }
+
+                                &.feedback {
+
+                                    i {
+                                        background-position-y: 50%;
+                                    }
+                                }
+
+                                &.overView {
+
+                                    i {
+                                        background-position-y: 66%;
+                                    }
+                                }
+
+                                &.acpw {
+
+                                    i {
+                                        background-position-y: 82%;
+                                    }
+                                }
+
+                                &.logout {
+
+                                    i {
+                                        background-position-y: 100%;
+                                    }
+                                }
+
+                                i {
+                                    width: 5vw;
+                                    height: 5vw;
+                                }
+
+                                p {
+                                    color: $mainColor_3;
+                                    font-size: 0.95rem;
+                                    line-height: 40px;
+                                    margin-left: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // 會員資料
+                &.userDetail {
+                    padding: 0 0 22vw;
+
+                    .topLine {
+                        width: calc(100% - 8vw);
+                        height: auto;
+                        @include mobile_Title;
+                        margin: 0 auto;
+                    }
+
+                    .userBasic {
+                        width: 100%;
+                        height: auto;
+                        border-bottom: 1px solid $mainColor_6;
+                        margin-top: 2vw;
+
+                        .userBox {
+                            width: 90%;
+                            height: auto;
+                            border: 1px solid $mainColor_6;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 0 auto;
+
+                            p {
+                                color: $mainColor_6;
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                            }
+
+                            .picblock {
+                                width: 31%;
+                                height: auto;
+                                position: relative;
+
+                                .userPic {
+                                    width: 25vw;
+                                    height: 25vw;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    margin: 2vw 0;
+                                }
+
+                                .picEdit {
+                                    width: 35px;
+                                    height: 35px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: azure;
+                                    border-radius: 50px;
+                                    border: 3px solid $mainColor_8;
+                                    position: absolute;
+                                    bottom: 7px;
+                                    right: -10px;
+
+                                    i {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .acName {
+                            width: 90%;
+                            color: $mainColor_6;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                            padding: 4vw 0;
+                            margin: 0 auto;
+
+                            span {
+                                display: block;
+                                color: $mainColor_3;
+                                font-size: 1rem;
+                                margin-top: 1vw;
+                            }
+                        }
+                    }
+
+                    .userOther {
+                        width: 100%;
+                        height: auto;
+
+                        &.edit {
+
+                            input {
+                                width: 87%;
+                                height: auto;
+                                @include inputStyle_2;
+                                display: block;
+                                margin-bottom: 10px;
+                            }
+
+                            .datebox {
+                                width: 100%;
+                                height: auto;
+                                position: relative;
+                                margin-bottom: 10px;
+
+                                input {
+                                    margin: 0;
+                                }
+
+                                i {
+                                    width: 5vw;
+                                    height: 5vw;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 18%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+
+                            .selectBox {
+                                display: inline-block;
+                                width: auto;
+                                height: auto;
+                                position: relative;
+                                margin-bottom: 10px;
+
+                                &::before {
+                                    content: "";
+                                    @include arrow_2;
+                                    transform: translateY(-50%) rotate(90deg);
+                                    right: 10%;
+                                }
+
+                                select {
+                                    width: auto;
+                                    height: auto;
+                                    @include selectStyle_2;
+                                    display: block;
+                                }
+                            }
+
+                            .editing {
+                                color: $mainColor_10;
+                            }
+
+                            .remind {
+                                display: none;
+                            }
+                                
+                        }
+
+                        form {
+                            width: 100%;
+                            height: auto;
+
+                            label {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                                border-bottom: 1px solid $mainColor_6;
+                                padding: 4vw 5vw;
+
+                                &:last-child {
+                                    border: none;
+                                }
+
+                                .inputTitle {
+                                    color: $mainColor_6;
+                                    font-size: 1.2rem;
+                                    font-weight: bold;
+                                    margin-bottom: 2vw;
+                                }
+
+                                input {
+                                    display: none;
+                                }
+
+                                select {
+                                    display: none;
+                                }
+
+                                .submitBtn {
+                                    width: 46%;
+                                    height: auto;
+                                    @include btnStyle_2;
+                                    display: none;
+                                    margin: 0 auto 4vw;
+
+                                    &.display {
+                                        display: flex;
+                                    }
+                                }
+
+                                .userCurrent {
+                                    color: $mainColor_3;
+                                    font-size: 1rem;
+
+                                    span {
+                                        color: $mainColor_9;
+                                        font-size: 0.9rem;
+                                        line-height: 1.5rem;
+                                    }
+                                }
+
+                                .remind {
+                                    width: 100%;
+                                    height: auto;
+                                    background: $mainColor_17;
+                                    padding: 5vw;
+                                    margin-bottom: 5vw;
+
+                                    p {
+                                        color: $mainColor;
+                                        font-size: 0.9rem;
+                                        text-align: center;
+                                        line-height: 1.5rem;
+
+                                        &:first-child {
+                                            margin-bottom: 2vw;
+                                        }
+
+                                        span {
+                                            color: $mainColor_10;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .topLine {
+                    width: 100%;
+                    height: auto;
+                    @include mobile_Title;
+                }
+            }
+        }
+    }
+}
+
+    
