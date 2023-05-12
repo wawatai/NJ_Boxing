@@ -1850,12 +1850,14 @@ html body .filter .jumpWindow.betState .content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 24px;
 }
 html body .filter .jumpWindow.betState .content p {
   color: #ffffff;
   font-size: 0.975rem;
   text-align: center;
   margin: auto;
+  padding: 7px;
 }
 html body .filter .jumpWindow.betState .content .closeWindow {
   width: 30%;
@@ -1877,7 +1879,7 @@ html body .filter .jumpWindow.betState .content .closeWindow {
           justify-content: center;
   cursor: pointer;
   padding: 10px 0;
-  margin: 0 auto 20px;
+  margin: 20px auto;
 }
 html body .filter .jumpWindow.betState .content .closeWindow:hover, html body .filter .jumpWindow.betState .content .closeWindow:active, html body .filter .jumpWindow.betState .content .closeWindow.active {
   background: #b8151b;
@@ -2753,11 +2755,11 @@ html body .center .right {
       flex-shrink: 0;
 }
 html body .center .right .betBlock {
-  width: 100%;
+  width: 300px;
   height: auto;
   background: #202020;
   border-radius: 10px;
-  position: relative;
+  position: fixed;
 }
 html body .center .right .betBlock .topList {
   width: 100%;

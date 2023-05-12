@@ -340,11 +340,11 @@
         flex-shrink: 0;
 
         .betBlock {
-            width: 100%;
+            width: 300px;
             height: auto;
             background: $mainBG_2;
             border-radius: 10px;
-            position: relative;
+            position: fixed;
 
             .topList {
                 width: 100%;

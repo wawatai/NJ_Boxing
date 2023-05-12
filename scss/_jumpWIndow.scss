@@ -50,12 +50,14 @@
             .content {
                 display: flex;
                 flex-direction: column;
+                padding: 24px;
 
                 p {
                     color: $mainColor_1;
                     font-size: 0.975rem;
                     text-align: center;
                     margin: auto;
+                    padding: 7px;
                 }
 
                  .closeWindow {
@@ -63,7 +65,7 @@
                     height: auto;
                     @include btnStyle_1;
                     padding: 10px 0;  //2023-02-18 修
-                    margin: 0 auto 20px;  //2023-02-18 修
+                    margin: 20px auto;  //2023-02-18 修
                 }
             }
         }
