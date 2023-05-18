@@ -4183,6 +4183,9 @@ html body main .center .leftSide {
         -ms-flex-order: 1;
             order: 1;
   }
+  html body main .center .mainArea.index .gameContent .content .gBlock .down .infoDetail .date {
+    font-size: 1rem;
+  }
   html body main .center .mainArea.index .gameContent .content .gBlock .down .pkTeam {
     width: 58%;
     padding: 7vw 4vw 4vw;
