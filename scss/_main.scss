@@ -1,0 +1,36 @@
+html {
+    width: 100%;
+    height: auto;
+    background: $BG;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-text-size-adjust: 100%;
+
+    body {
+        width: 100%;
+        height: auto;
+
+        main {
+            width: 100%;
+            height: auto;
+            padding-top: 125px;
+
+            &.innerPage {
+
+                .center { //2023-02-18 增
+
+                    .left {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        //2023-02-17 移除引入
+        @import "./header";
+        @import "./memberPage";
+        @import "./jumpWIndow";
+        @import "./mainWrap";
+        @import "./footer";
+    }
+}
+
